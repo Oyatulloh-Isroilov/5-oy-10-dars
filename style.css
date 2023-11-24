@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+}
+
+.images {
+  display: flex;
+  width: 1000px;
+  overflow-x: scroll;
+  gap: 100px;
+}
+
+.images div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 23px;
+  padding: 15px;
+  flex: none;
+}
+
+.images div img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+
+.images::-webkit-scrollbar {
+  display: none;
+}
+
+#back,
+#next {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.ImgsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+.images div img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
